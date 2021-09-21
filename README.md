@@ -41,7 +41,7 @@ and  you would then find the file `foo_withLineNum.pdf` in the Desktop folder.
 Here's an example based on [this preprint](https://www.biorxiv.org/content/10.1101/2020.01.30.927236v1#disqus_thread).
 The pdf without line numbers looks like this:
 
-![](https://raw.githubusercontent.com/ajrominger/pdflinesplz/main/inst/woutLinNum.png | width=100)
+![](https://raw.githubusercontent.com/ajrominger/pdflinesplz/main/inst/woutLinNum.png){:width="50%"}
 
 Adding line numbers with `addLines2pdf` gives you this:
 
