@@ -1,0 +1,20 @@
+Package: pdflinesplz
+Type: Package
+Title: Add line numbers to a pdf
+Version: 0.1.0
+Author: Andy Rominger
+Maintainer: <andrew.rominger@maine.edu>
+Description: Like the title says...
+License: GPL-3.0 License
+Encoding: UTF-8
+LazyLoad: yes
+LazyData: true
+Depends:
+    R (>= 4.0)
+Imports:
+    magick,
+    tinytex
+    rmarkdown
+Suggests:
+    testthat
+RoxygenNote: 7.1.1
