@@ -1,16 +1,18 @@
 \documentclass{article}
 \usepackage{tikz}
 \usepackage{pgfplotstable}
+\pgfplotsset{compat=1.17}
+\usepackage[margin=0.01in]{geometry}
 
 
-\newcommand{\addlinenumbers}[5]{
+\newcommand{\addlinenumbers}[3]{
   \pgfmathtruncatemacro{\leftnumber}{#1-1}
   \pgfplotstableread{\pdfname-\leftnumber.txt}\leftlines
   \begin{tikzpicture}[font=\tiny,anchor=east]
-  \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=14cm,page=#1]{\pdfname.pdf}};
+  \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth,page=#1]{\pdfname.pdf}};
     \begin{scope}[x={(image.south east)},y={(image.north west)}]
       \pgfplotstableforeachcolumnelement{[index] 0}\of\leftlines\as\position{
-          \node [font=\tiny,red] at (0.04,1-\position/1000)         {\pgfplotstablerow};
+          \node [font=\footnotesize,red] at (0.04,1-\position/1000)         {#1: \pgfplotstablerow};
         \pgfmathtruncatemacro{\checkexcluded}{
           (\pgfplotstablerow>=#2 && \pgfplotstablerow<=#3) ? 1 : 0)
         }
@@ -21,12 +23,7 @@
 
 \begin{document}
 
-\def\pdfname{foo}
-\addlinenumbers{1}{20}{50}{2}{65}
-\addlinenumbers{2}{20}{50}{2}{65}
-\addlinenumbers{3}{20}{50}{2}{65}
-\addlinenumbers{4}{20}{50}{2}{65}
-
+$body$
 
 \end{document}
 
