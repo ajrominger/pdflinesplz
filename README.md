@@ -46,7 +46,7 @@ The pdf without line numbers looks like this (screen shot of part of first page)
 
 Adding line numbers with `addLines2pdf` gives you this:
 
-![](https://raw.githubusercontent.com/ajrominger/pdflinesplz/main/inst/withLinNum.png)
+<img src="https://raw.githubusercontent.com/ajrominger/pdflinesplz/main/inst/withLinNum.png" width="50%">
 
 The line number format follows the convention of `pageNum: lineNum` and line 
 numbers restart on each page
